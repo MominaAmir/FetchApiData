@@ -6,7 +6,7 @@ const {studentData, home , dlt, add,update} = require('../controllers/studentDat
 router.route("/").get(home)
 router.route('/studentData').get(studentData);
 router.route('/studentData/add').post(add);
-router.route('/studentData/delete').delete(dlt);
+router.route('/studentData/delete/:studentId').delete(dlt);
 router.route('/studentData/update').put(update);
 
 module.exports = router;

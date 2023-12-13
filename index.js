@@ -5,6 +5,8 @@ const std = require('./routes/Students');
 const cors = require('cors');
 
 app.use(cors()); 
+app.use(express.static(__dirname));
+app.use('/' , std);
 
 mongoose.connect('mongodb://localhost:27017/UniversityData').then(async () => {
     console.log('Connection Created ');
@@ -14,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/UniversityData').then(async () => {
 
 app.use(express.json());
 
-app.use('/api', std);
+
 
 const start = async () => {
     try{

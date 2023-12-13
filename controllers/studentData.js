@@ -1,17 +1,7 @@
 const Data = require('../models/data');
 
 const home = async (req , res) => {
-    res.status(200).send(`<h1>This is a Home page </h1>
-    <h3>To GET</h3>
-    <p>Base Url/studentData</p>
-    <h3>To Add</h3>
-    <p>Base url/studentData/add?FName=name&LName=lname&Deparment=dpt_name&Courses=courseName&CGPA=gpa
-    </p>
-    <h3>To Update</h3>
-    <p>Base Url/studentData/update?id=your_id&FName=name&LName=lname&Deparment=dpt_name&Courses=courseName&CGPA=gpa</p>
-    <h3>To Delete</h3>
-    <h5>you have to pass id of data you want to delete</h5>
-    <p>base url/studentData/delete?id= your_id</p>`);
+    res.status(200).send();
 }
 
 const studentData = async (req , res) => {
